@@ -81,7 +81,6 @@ header .hero {
 .categories img {
   /* width: 100%; */
   max-width: 80px;
-
 }
 
 .categories .watch,
@@ -108,7 +107,7 @@ header .hero {
   gap: 16px;
 }
 .products .card {
-  /* max-width: 340px; */
+  max-width: 340px;
   border-radius: 16px;
   border: 2px solid black;
   text-align: center;
@@ -133,9 +132,17 @@ header .hero {
   color: white;
   padding: 12px 30px;
   border: none;
+    border: 1px solid black;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s;
 }
+.products button:hover {
+  background-color: white;
+  color: black;
+ 
+}
+ 
 
 .subscribe {
   display: flex;
@@ -161,52 +168,6 @@ header .hero {
   width: 380px;
 }
 
-/* MOBILE */
-@media screen and (max-width: 640px) {
-  header {
-    flex-direction: column;
-  }
-
-  header h1 {
-    font-size: 26px;
-  }
-
-  header h2 {
-    font-size: 22px;
-  }
-
-  header img {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .categories{
-    flex-wrap: wrap;
-  }
-  .categories .watch,
-  .categories .bag,
-  .categories .shoe {
-    flex-direction: column;
-  }
-
-  .products {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .products .card {
-    width: 100%;
-  }
-
-  .subscribe {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .subscribe input {
-    width: 90%;
-  }
-}
 
 /* TABLET */
 @media screen and (max-width: 992px) {
@@ -238,8 +199,61 @@ header .hero {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .title{
+    text-align: center;
+  }
+}
 
-  .products .card {
-    max-width: 300px;
+/* MOBILE */
+@media screen and (max-width: 640px) {
+  header {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  header h2 {
+    font-size: 22px;
+  }
+
+  header img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .categories {
+    flex-wrap: wrap;
+  }
+  .categories .watch,
+  .categories .bag,
+  .categories .shoe {
+    flex-direction: column;
+  }
+
+  .title {
+    text-align: center;
+  }
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+  .products .card p {
+    font-size: 14px;
+  }
+  .products .card img {
+    width: 200px;
+  }
+
+  .subscribe {
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .subscribe input {
+    width: 90%;
+    margin-bottom: 12px;
   }
 }
