@@ -14,10 +14,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
 }
-/* nav img{
-    width:;
-} */
 
 header {
   background: #feeae9;
@@ -83,13 +81,15 @@ header .hero {
 .categories img {
   /* width: 100%; */
   max-width: 80px;
+
 }
 
 .categories .watch,
-.bag,
-.shoe {
+.categories .bag,
+.categories .shoe {
   /* border: 1px solid black; */
   display: flex;
+  flex-wrap: nowrap;
   gap: 12px;
   justify-content: space-between;
   align-items: center;
@@ -108,7 +108,7 @@ header .hero {
   gap: 16px;
 }
 .products .card {
-  max-width: 340px;
+  /* max-width: 340px; */
   border-radius: 16px;
   border: 2px solid black;
   text-align: center;
@@ -135,4 +135,111 @@ header .hero {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  height: 300px;
+  background-color: #feeae9;
+}
+
+.subscribe p {
+  color: #929292;
+  font-size: 12px;
+}
+.subscribe input {
+  background: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 12px;
+  width: 380px;
+}
+
+/* MOBILE */
+@media screen and (max-width: 640px) {
+  header {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  header h2 {
+    font-size: 22px;
+  }
+
+  header img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .categories{
+    flex-wrap: wrap;
+  }
+  .categories .watch,
+  .categories .bag,
+  .categories .shoe {
+    flex-direction: column;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products .card {
+    width: 100%;
+  }
+
+  .subscribe {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .subscribe input {
+    width: 90%;
+  }
+}
+
+/* TABLET */
+@media screen and (max-width: 992px) {
+  .max-width {
+    padding: 0 20px;
+  }
+
+  header {
+    gap: 30px;
+    padding: 30px;
+  }
+
+  header img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .categories {
+    gap: 16px;
+  }
+
+  .categories .watch,
+  .categories .bag,
+  .categories .shoe {
+    width: 30%;
+  }
+
+  .products {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .products .card {
+    max-width: 300px;
+  }
 }
